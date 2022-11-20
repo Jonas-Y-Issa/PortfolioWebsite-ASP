@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KCbtqnQO/cjG6zZsv7iwyzqXPez7mvYqOSmrYLnWDIsIwJgoFURgvQ4a0nrWZzyEgU28lB1alOljtpB3l/XHtw==",
+  "success": true,
+  "projectFilePath": "/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/ASPPortfolio.csproj",
+  "expectedPackageFiles": [
+    "/home/kyuudou/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.0/microsoft.aspnetcore.app.ref.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
