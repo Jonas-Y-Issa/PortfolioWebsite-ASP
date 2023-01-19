@@ -583,3 +583,4 @@
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/obj/Debug/net7.0/linux-arm/ASPPortfolio.pdb
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/obj/Debug/net7.0/linux-arm/ASPPortfolio.genruntimeconfig.cache
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/obj/Debug/net7.0/linux-arm/ref/ASPPortfolio.dll
+/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

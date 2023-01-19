@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -51,6 +55,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "Microsoft.NET.Build.Containers": {
+              "target": "Package",
+              "version": "[0.2.7, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -74,15 +82,15 @@
               "version": "[7.0.0, 7.0.0]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
               "version": "[7.0.0, 7.0.0]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.linux-arm",
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
               "version": "[7.0.0, 7.0.0]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.linux-arm",
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
               "version": "[7.0.0, 7.0.0]"
             }
           ],
@@ -98,7 +106,7 @@
         }
       },
       "runtimes": {
-        "linux-arm": {
+        "linux-x64": {
           "#import": []
         }
       }

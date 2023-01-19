@@ -188,8 +188,6 @@
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Connections.Abstractions.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.CookiePolicy.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Cors.dll
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Cryptography.Internal.dll
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.DataProtection.Abstractions.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.DataProtection.Extensions.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.DataProtection.dll
@@ -281,8 +279,6 @@
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Hosting.Abstractions.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Hosting.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Http.dll
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Identity.Core.dll
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Identity.Stores.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Localization.Abstractions.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Localization.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Logging.Abstractions.dll
@@ -323,6 +319,9 @@
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Azure.Core.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Azure.Identity.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Humanizer.dll
+/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.AspNetCore.Razor.Language.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Bcl.AsyncInterfaces.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Build.dll
@@ -352,6 +351,8 @@
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.EntityFrameworkCore.Sqlite.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.EntityFrameworkCore.SqlServer.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.DependencyModel.dll
+/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Identity.Core.dll
+/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Extensions.Identity.Stores.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Identity.Client.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.Identity.Client.Extensions.Msal.dll
 /home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Debug/net7.0/linux-arm/publish/Microsoft.IdentityModel.Abstractions.dll
