@@ -1,19 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace ASPPortfolio.Pages;
+using ASPPortfolio.Data;
+namespace ASPPortfolio.Models;
 
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    private ASPPortfolioContext Context { get; }
+    public IndexModel(ASPPortfolioContext _context)
     {
-        _logger = logger;
+        this.Context = _context;
     }
 
+    public List<Project> objects { get; set; }
+ 
     public void OnGet()
     {
-
+        this.objects = (from project in this.Context.Project.Take(10)
+                          select project).ToList();
     }
+    
 }
