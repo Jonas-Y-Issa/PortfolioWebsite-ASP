@@ -3926,7 +3926,7 @@
         }
       }
     },
-    "net7.0/linux-x64": {
+    "net7.0/linux-arm64": {
       "Azure.Core/1.24.0": {
         "type": "package",
         "dependencies": {
@@ -6376,7 +6376,7 @@
           "lib/netstandard2.0/_._": {}
         },
         "native": {
-          "runtimes/linux-x64/native/libe_sqlite3.so": {}
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {}
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
@@ -15801,7 +15801,15 @@
             "version": "[7.0.0, 7.0.0]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+            "version": "[7.0.0, 7.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-arm64",
+            "version": "[7.0.0, 7.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.linux-arm64",
             "version": "[7.0.0, 7.0.0]"
           }
         ],
@@ -15817,7 +15825,7 @@
       }
     },
     "runtimes": {
-      "linux-x64": {
+      "linux-arm64": {
         "#import": []
       }
     }

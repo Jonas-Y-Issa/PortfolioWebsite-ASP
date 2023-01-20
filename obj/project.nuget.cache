@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oMa5pCxBppE1+ajR5c+Wz33LwqJ5skOC+Kp46AvAWrf2vs1vDCpd6Zx7REjl1MjXHYYFw3kWoH4vA8MqZab4VA==",
+  "dgSpecHash": "uj9/QSFKmfBT1Gumv9w96xjMXGAmdJuIDZ6oQe9gfkRN7T/8wX8o25NVkoDilx5eOcC2MhCOJken3KcT3/osQg==",
   "success": true,
   "projectFilePath": "/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/ASPPortfolio.csproj",
   "expectedPackageFiles": [
@@ -223,8 +223,10 @@
     "/home/kyuudou/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
     "/home/kyuudou/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/home/kyuudou/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
+    "/home/kyuudou/.nuget/packages/microsoft.netcore.app.runtime.linux-arm64/7.0.0/microsoft.netcore.app.runtime.linux-arm64.7.0.0.nupkg.sha512",
     "/home/kyuudou/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.0/microsoft.aspnetcore.app.ref.7.0.0.nupkg.sha512",
-    "/home/kyuudou/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.0/microsoft.netcore.app.host.linux-x64.7.0.0.nupkg.sha512"
+    "/home/kyuudou/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-arm64/7.0.0/microsoft.aspnetcore.app.runtime.linux-arm64.7.0.0.nupkg.sha512",
+    "/home/kyuudou/.nuget/packages/microsoft.netcore.app.host.linux-arm64/7.0.0/microsoft.netcore.app.host.linux-arm64.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
