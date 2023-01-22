@@ -1,4 +1,0 @@
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Release/net7.0/linux-arm64/publish/appsettings.Development.json
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Release/net7.0/linux-arm64/publish/appsettings.json
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Release/net7.0/linux-arm64/publish/ASPPortfolio.pdb
-/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/bin/Release/net7.0/linux-arm64/publish/ASPPortfolio
