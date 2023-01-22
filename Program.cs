@@ -2,22 +2,30 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ASPPortfolio.Data;
 using ASPPortfolio.Models;
-
+using Microsoft.AspNetCore.HttpOverrides;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ASPPortfolioContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("ASPPortfolioContext") ?? throw new InvalidOperationException("Connection string 'ASPPortfolioContext' not found.")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("ASPPortfolioContext") ?? throw new InvalidOperationException("Connection string 'ASP<PortfolioContext' not found.")));
+
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders =
+        ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
 
 var app = builder.Build();
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-
     SeedData.Initialize(services);
 }
+app.UseAuthentication();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -26,9 +34,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UsePathBase("/asp");
 app.UseRouting();
 
 app.UseAuthorization();
@@ -36,3 +44,6 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 app.Run();
+
+
+

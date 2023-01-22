@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0p6O9k+dw9B8trhwu+/RkG/lErZmxrAkCRxqW9dZ4Ig=",
+  "Hash": "JadUW3xl8Cvr6msaRX6r1gO67rZ2pSoCxxDtXZp1320=",
   "Source": "ASPPortfolio",
   "BasePath": "_content/ASPPortfolio",
   "Mode": "Default",
@@ -1630,6 +1630,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/wwwroot/projects.db",
+      "SourceId": "ASPPortfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/kyuudou/Desktop/Main Directory/Projects/Programming/Work/Website/ASPPortfolio/wwwroot/",
+      "BasePath": "_content/ASPPortfolio",
+      "RelativePath": "projects.db",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/projects.db"
     }
   ]
 }

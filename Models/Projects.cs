@@ -12,3 +12,13 @@ public class Project
     public string? Description { get; set; }
 
 }
+/*
+CREATE TABLE project
+(
+Inc INTEGER PRIMARY KEY AUTOINCREMENT, 
+Preface TEXT,
+Title TEXT,
+ExtLink TEXT,
+Description TEXT
+);
+*/
