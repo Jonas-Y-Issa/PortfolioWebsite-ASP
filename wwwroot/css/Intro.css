@@ -11,17 +11,20 @@
   white-space: pre-wrap;
   justify-content: center;
 }
+
 #backdrop{
-  width: 100%;
-  height: 100vh;
+  width: 50%;
+  left: 100px;
+  height: 90vh;
   z-index: -1;
   position: fixed;
+
   /*
   border-bottom-right-radius: 100%;
   border-width: 5px;
+  border-color:darkcyan;
   border-bottom-style:solid;
   transition: border-color var(--mode-speed);
-  border-color: var(--red-bright);
   */
 }
 
@@ -35,17 +38,25 @@
 .stack_img{
   width: 80px;
   height: 80px;
-  border-radius: 50%;
-  position: absolute;
-  border-color: var(--red-bright);
-  border-style:outset;
-  border-width: 4px;
+  margin-left: 10px;
   overflow: hidden;
-  background-image: linear-gradient(120deg, #ffffff 0%, var(--red-bright) 100%);
+  position: absolute;
+  /*
+  border-color: var(--light-grey);
+  border-style:double;
+  border-width: 4px;
+  background-image: linear-gradient(150deg, #ffffff 0%, #ddfffc 100%);*/
+
 
 }
-.dark-mode .stack_img{
-  border-style:inset;
+.dark-mode #stack_bubble{
+	transition: background-color var(--mode-speed-background) , color var(--mode-speed-background) ;
+	transition-timing-function: linear;
+}
+#stack_bubble{
+  background-color: var(--light-grey);
+	transition: background-color var(--mode-speed-background) , color var(--mode-speed-background) ;
+  z-index: 1;	transition-timing-function: linear;
 }
 .dark-mode #intro img{
   transition-property: background-image;
