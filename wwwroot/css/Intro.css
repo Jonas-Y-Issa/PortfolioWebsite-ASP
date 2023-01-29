@@ -1,19 +1,61 @@
+.intro {
+  position: fixed;
+  width: auto;
+  font-size: var(--fs5);
+  font-family: var(--font-main);
+  font-weight: bold;
+  z-index: -1;
+  margin: 0;    
+  transform: translate(0, -50%) translateY(50vh);
+  display:flexbox;
+  white-space: pre-wrap;
+  justify-content: center;
+}
+#backdrop{
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  /*
+  border-bottom-right-radius: 100%;
+  border-width: 5px;
+  border-bottom-style:solid;
+  transition: border-color var(--mode-speed);
+  border-color: var(--red-bright);
+  */
+}
 
-  .intro {
-    position: fixed;
-    width: auto;
-    font-size: var(--fs5);
-    font-family: var(--font-main);
-    font-weight: bold;
-    z-index: -1;
-    margin: 0;    
-    transform: translate(0, -50%) translateY(50vh);
-    display:flexbox;
-    white-space: pre-wrap;
-    justify-content: center;
-  }
+.stack_img img{
+  right: 110px;
+  height: 80px;
+  flex-direction: column;
+  place-items: center;
+  opacity: .7;
+}
+.stack_img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  border-color: var(--red-bright);
+  border-style:outset;
+  border-width: 4px;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #ffffff 0%, var(--red-bright) 100%);
+
+}
+.dark-mode .stack_img{
+  border-style:inset;
+}
+.dark-mode #intro img{
+  transition-property: background-image;
+  transition-duration: var(--mode-speed) ;
+  /*filter: invert(100%);*/
+}
+#intro img{
+	transition: filter var(--mode-speed-background);
+}
 @media (min-width: 1000px){
-
   .intro>span:nth-child(1)::before{
     content: " ";
   }
@@ -29,16 +71,15 @@
   
 }
 .intro>span:nth-child(2){
-  color:var(--red-dark);
+  color:var(--red-bright);
   transition-property: color;
   transition-duration: var(--mode-speed) ;
 }
 .intro>span:nth-child(3){
-  color:var(--red-dark);
+  color:var(--red-bright);
   transition-property: color;
   transition-duration: var(--mode-speed) ;
 }
-
 /* SVG Links */
 #svg-container{
   margin-left: 10%;
@@ -72,9 +113,7 @@
   right: 0;
   vertical-align: middle;
   z-index: 3;
-
 }
-
 .stat div a{
   position: relative;
   float: right;
@@ -88,11 +127,9 @@ a[href^="mailto:"]:hover{
   text-decoration: none;
   color: var(--red-bright);
   transform: translateY(-5px);
-
 }
 
 @media (max-width: 999px){
-
   .stat{
     font-family: var(--font-compliment);
     position: fixed;
@@ -104,3 +141,4 @@ a[href^="mailto:"]:hover{
     flex-direction:column-reverse;
   } 
 }
+

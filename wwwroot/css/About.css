@@ -3,6 +3,7 @@
      background-color: rgba(0, 0, 0, 0.048);
      font-family: var(--font-main);
      padding: 5%;
+     float: left;
      min-height: var(--img-size);
      border-left: outset 5px var(--red-bright);
      border-bottom: outset 5px var(--red-bright);

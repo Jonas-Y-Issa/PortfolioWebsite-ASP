@@ -7,23 +7,23 @@
     <title>@ViewData["Title"]</title>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="wwwroot/js/Typewriter.js" defer></script>
+    <script type="text/javascript" src="js/Typewriter.js" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKNTW4LT72"></script>
 
-    <link rel="stylesheet" href="wwwroot/css/3dCube.css"/>
-    <link rel="stylesheet" href="wwwroot/css/About.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Apps.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Dark-mode.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Footer.css"/>
-    <link rel="stylesheet" href="wwwroot/css/General.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Header.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Intro.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Project-Slideshow.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Projects.css"/>
-    <link rel="stylesheet" href="wwwroot/css/scroll.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Sections.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Skills.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Variables.css"/>
+    <link rel="stylesheet" href="css/3dCube.css"/>
+    <link rel="stylesheet" href="css/About.css"/>
+    <link rel="stylesheet" href="css/Apps.css"/>
+    <link rel="stylesheet" href="css/Dark-mode.css"/>
+    <link rel="stylesheet" href="css/Footer.css"/>
+    <link rel="stylesheet" href="css/General.css"/>
+    <link rel="stylesheet" href="css/Header.css"/>
+    <link rel="stylesheet" href="css/Intro.css"/>
+    <link rel="stylesheet" href="css/Project-Slideshow.css"/>
+    <link rel="stylesheet" href="css/Projects.css"/>
+    <link rel="stylesheet" href="css/scroll.css"/>
+    <link rel="stylesheet" href="css/Sections.css"/>
+    <link rel="stylesheet" href="css/Skills.css"/>
+    <link rel="stylesheet" href="css/Variables.css"/>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -34,12 +34,12 @@
 
 </head>
 
-<body class="dark-mode">
+<body>
     <partial name="_Header" />
     @RenderBody()
 
-    <script src="wwwroot/lib/jquery/dist/jquery.min.js"></script>
-    <script src="wwwroot/js/site.js" asp-append-version="true"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
         <partial name="_Footer" />

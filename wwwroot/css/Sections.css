@@ -34,8 +34,6 @@ section{
 }
 .section-header-wrapper{
     padding-top: var(--nav-height);  
-
-
 }
 .section-header::before{
     content:"@ ";
@@ -46,7 +44,6 @@ section{
 
 @media (max-width: 999px){
     .section-header{
-
     display: block;
     text-align: center;
     }
