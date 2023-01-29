@@ -5,7 +5,6 @@ dotnet publish -c Release --runtime linux-arm64
 
 scp -r bin/Release/net7.0/linux-arm64/publish user@website.com:~/dir
 
-scp -r bin/Release/net7.0/linux-arm64/publish nimbus@developerjonas.com:~/portfolioWebsite/ASPPortfolio
 
 #linux file
 ASPPortfolio.service
@@ -15,13 +14,13 @@ After=network.target
 
 [Service]
 Type=forking
-WorkingDirectory=/home/nimbus/portfolioWebsite/ASPPortfolio/publish/
-ExecStart=/home/nimbus/portfolioWebsite/ASPPortfolio/publish/ASPPortfolio
+WorkingDirectory= directory /publish/
+ExecStart=directory/publish/ASPPortfolio
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
 RemainAfterExit=yes
-User=nimbus
+User=user
 
 [Install]
 WantedBy=multi-user.target
