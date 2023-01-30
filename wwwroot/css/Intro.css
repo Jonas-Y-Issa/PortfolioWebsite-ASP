@@ -1,31 +1,21 @@
 .intro {
   position: fixed;
-  width: auto;
+  width: 100vw;
   font-size: var(--fs5);
   font-family: var(--font-main);
   font-weight: bold;
   z-index: -1;
   margin: 0;    
   transform: translate(0, -50%) translateY(50vh);
-  display:flexbox;
-  white-space: pre-wrap;
   justify-content: center;
 }
 
 #backdrop{
-  width: 50%;
+  width: 100%;
   left: 100px;
   height: 90vh;
   z-index: -1;
   position: fixed;
-
-  /*
-  border-bottom-right-radius: 100%;
-  border-width: 5px;
-  border-color:darkcyan;
-  border-bottom-style:solid;
-  transition: border-color var(--mode-speed);
-  */
 }
 
 .stack_img img{
@@ -33,7 +23,6 @@
   height: 80px;
   flex-direction: column;
   place-items: center;
-  opacity: .7;
 }
 .stack_img{
   width: 80px;
@@ -41,28 +30,57 @@
   margin-left: 10px;
   overflow: hidden;
   position: absolute;
+
   /*
   border-color: var(--light-grey);
   border-style:double;
   border-width: 4px;
   background-image: linear-gradient(150deg, #ffffff 0%, #ddfffc 100%);*/
-
+}
+.dark-mode .stack_img{
+}
+#background_svg{
+  /*
+  mix-blend-mode: hard-light;
+  background-color: var(--red-dark);
+  
+  */
+  left:-1px;
+  bottom: -80px;
+  background-image: linear-gradient(90deg, var(--red-dark), var(--red-bright) 33%, var(--red-bright) 71%, var(--red-dark));
+  position: fixed;
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+  
+  -webkit-mask-position-y: bottom;
+  height: 100vh;
+  z-index: -4;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-mask-size:100% auto;
+  -webkit-mask-image: url(/wwwroot/images/japanese-wave-sketch-27.png);
+  mask-image: url(/wwwroot/images/japanese-wave-sketch-27.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 
 }
+
 .dark-mode #stack_bubble{
 	transition: background-color var(--mode-speed-background) , color var(--mode-speed-background) ;
 	transition-timing-function: linear;
 }
 #stack_bubble{
-  background-color: var(--light-grey);
 	transition: background-color var(--mode-speed-background) , color var(--mode-speed-background) ;
-  z-index: 1;	transition-timing-function: linear;
+  z-index: 1;	
+  transition-timing-function: linear;
 }
 .dark-mode #intro img{
   transition-property: background-image;
   transition-duration: var(--mode-speed) ;
   /*filter: invert(100%);*/
 }
+
 #intro img{
 	transition: filter var(--mode-speed-background);
 }
@@ -76,6 +94,13 @@
   .intro>span:nth-child(4)::before{
     content: "   ";
   }
+  #background_svg{
+    -webkit-mask-size:100vw 100vh;
+    bottom: -80px;
+
+
+    -webkit-mask-position-y: top;
+  }
 }
 .intro>span:nth-child(1){
   color:var(--imprint-text);
@@ -85,11 +110,23 @@
   color:var(--red-bright);
   transition-property: color;
   transition-duration: var(--mode-speed) ;
+
 }
 .intro>span:nth-child(3){
+  /*
   color:var(--red-bright);
   transition-property: color;
   transition-duration: var(--mode-speed) ;
+  */
+  /*background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(33%, #ffffff), color-stop(71%, #f48080), to(#eca5a5));*/
+  background-image: linear-gradient(90deg, var(--red-dark), var(--red-bright) 33%, var(--red-bright) 71%, var(--red-dark));
+  color: #999;
+  text-align: center;
+  white-space: normal;
+  mix-blend-mode: hard-light;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* SVG Links */
 #svg-container{

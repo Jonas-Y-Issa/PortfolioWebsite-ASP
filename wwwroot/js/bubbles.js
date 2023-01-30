@@ -1,7 +1,12 @@
 window.onload = () =>{
     let container = document.querySelector("#backdrop");
     let bubbles = document.querySelectorAll(".stack_img");
-
+    var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName('body')[0],
+    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
     container.width = innerWidth;
     container.height = innerHeight;
 
@@ -12,7 +17,8 @@ class Bubble{
         this.bubble = bubble;
         this.ind = ind;
         this.play = true;
-        this.positionQuadratic(ind*0.1);
+        //this.positionQuadratic(ind*0.1);
+        this.positionDefault();
     }
     positionCurve(){
         this.bubble.style.top = this.ind * 84 + "px";
@@ -23,7 +29,7 @@ class Bubble{
     }    
     positionDefault(){
         this.bubble.style.top = (1.5+this.ind) * 90 + "px";
-        this.bubble.style.left = container.width - 120 +"px";
+        this.bubble.style.left = container.width - 300 +"px";
     }
     positionQuadratic(i){
         var x1 = container.width-(this.bubble.clientWidth);
@@ -102,5 +108,5 @@ class Bubble{
             }
         });
     }
-    animate();
+    //animate();
 }
