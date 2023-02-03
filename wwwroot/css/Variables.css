@@ -44,7 +44,7 @@
     --fs3: 15px;
     --fs5: 70px;
     --fs-header: 50px;
-    --fs-sub-header: 70px;
+    --fs-sub-header: clamp(50px, -0.875rem + 7.333vw, 70px);
     --mode-speed: 1s;
     --mode-speed-background: 2s;
     --left-pad: 100px;

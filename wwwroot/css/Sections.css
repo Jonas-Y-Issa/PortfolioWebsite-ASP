@@ -1,12 +1,17 @@
 section{
   min-height: 100vh;
 }
-
+#Content{
+    overflow: hidden;
+}
 .section-format{
     background-color: var(--light-grey-section);
   	transition: background-color  var(--mode-speed-background) ;
 	transition-timing-function: linear;
+    max-height: 100vh;
+    overflow: hidden;
 }
+
 .content-wrapper
 {
     display: flex;
@@ -43,8 +48,16 @@ section{
 
 @media (max-width: 999px){
     .section-header{
-    display: block;
     text-align: center;
-    }
 
+
+    display: flex;
+    padding-left: var(--left-pad);
+    justify-content: center;
+    align-items: center;
+    }
+    .section-header-wrapper{
+        padding: none;  
+        height: 100%;
+    }
 }

@@ -6,8 +6,13 @@ body {
 	transition-timing-function: linear;
   margin: 0;
   line-height: 1.3;
+  -webkit-font-smoothing: subpixel-antialiased;
+  width: 100%;
+  height: 100%;
 }
-
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 ::selection{
   color: white;
   background-color: black;

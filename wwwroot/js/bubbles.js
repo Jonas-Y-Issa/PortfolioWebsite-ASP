@@ -95,10 +95,10 @@ class Bubble{
 }
     let bubble_list = [];
     var i = -1;
-    bubbles.forEach(bubble => {
-        i += 1;
-        bubble_list.push(new Bubble(0,.09, bubble, i));
-    });
+    //bubbles.forEach(bubble => {
+        //i += 1;
+        //bubble_list.push(new Bubble(0,.09, bubble, i));
+    //});
 
     function animate(){
         requestAnimationFrame(animate);

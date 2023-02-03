@@ -3,7 +3,7 @@ header {
     background-color: inherit;
     position: fixed;
     margin-right: 30px;
-    font-size: var(--fs-header);
+    font-size: clamp(1.2rem, -0.875rem + 7.333vw, 3rem);
     height: var(--nav-height);
     width: 100%;
     height: auto;
@@ -12,6 +12,7 @@ header {
     transition: transform 0.2s ease-in-out;
     white-space: nowrap;  
   }
+
 .nav-up {
   transform: translateY(-90%);
 }
@@ -123,7 +124,9 @@ header h1{
   .nav_text { 
     display: none;
   }  
-
+  #typethis-wrapper {
+    padding-left: 20px;
+}
   .dropdown .dropbtn {
     font-size: var(--fs-header);  
     border: none;
