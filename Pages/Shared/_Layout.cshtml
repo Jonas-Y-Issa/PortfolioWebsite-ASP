@@ -3,7 +3,7 @@
     
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=1.0, user-scalable=0">
     <title>@ViewData["Title"]</title>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -37,13 +37,12 @@
 <body>
     <partial name="_Header" />
     @RenderBody()
-
+    <div id="like_button_container"></div>
     <script src="wwwroot/lib/jquery/dist/jquery.min.js"></script>
     <script src="wwwroot/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
         <partial name="_Footer" />
-
 
 </body>
 <!--[if lt IE 9]>

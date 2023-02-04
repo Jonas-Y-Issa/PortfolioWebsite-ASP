@@ -176,7 +176,7 @@ a[href^="mailto:"]:hover{
   color: var(--red-bright);
   transform: translateY(-5px);
 }
-
+/*
 @media (max-width: 999px){
   .stat{
     font-family: var(--font-compliment);
@@ -195,3 +195,4 @@ a[href^="mailto:"]:hover{
 }
 
 
+*/
