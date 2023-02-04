@@ -65,6 +65,7 @@ border-top: solid 1px var(--imprint-text);
     display: flex;
     flex-wrap: nowrap;
   }
+  /*
   .flex-item-footer:nth-child(2){
     margin-bottom: 80px;
   }
@@ -88,5 +89,5 @@ border-top: solid 1px var(--imprint-text);
     text-align: center;
     margin-right: 0px;
   }
-  
+  */
 }
