@@ -1,51 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=1.0, user-scalable=0">
     <title>@ViewData["Title"]</title>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="wwwroot/js/Typewriter.js" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKNTW4LT72"></script>
+    <script src="wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="wwwroot/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="wwwroot/js/darkmode.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="wwwroot/js/Typewriter.js" asp-append-version="true" defer></script>
+    <script type="text/javascript" src="wwwroot/js/headerscroll.js" asp-append-version="true"></script>
 
-    <link rel="stylesheet" href="wwwroot/css/3dCube.css"/>
-    <link rel="stylesheet" href="wwwroot/css/About.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Apps.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Dark-mode.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Footer.css"/>
-    <link rel="stylesheet" href="wwwroot/css/General.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Header.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Intro.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Project-Slideshow.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Projects.css"/>
-    <link rel="stylesheet" href="wwwroot/css/scroll.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Sections.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Skills.css"/>
-    <link rel="stylesheet" href="wwwroot/css/Variables.css"/>
+    <link rel="stylesheet" href="wwwroot/css/Variables.css" />
+    <link rel="stylesheet" href="wwwroot/css/General.css" />
+    <link rel="stylesheet" href="wwwroot/css/Header.css" />
+    <link rel="stylesheet" href="wwwroot/css/Footer.css" />
+    <link rel="stylesheet" href="wwwroot/css/Dark-mode.css" />
+    <link rel="stylesheet" href="wwwroot/css/scroll.css" />
+
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-EKNTW4LT72');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EKNTW4LT72');
     </script>
 
 </head>
 
 <body>
     <partial name="_Header" />
+    <partial name="Components/DarkModeButton" />
+
     @RenderBody()
-    <div id="like_button_container"></div>
-    <script src="wwwroot/lib/jquery/dist/jquery.min.js"></script>
-    <script src="wwwroot/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
-        <partial name="_Footer" />
-
+    @await RenderSectionAsync("Styles", required: false)
+    <partial name="_Contact" />
+    <partial name="_Footer" />
 </body>
-<!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
+
 </html>

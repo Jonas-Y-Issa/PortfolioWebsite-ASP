@@ -3,166 +3,114 @@
 @using ASPPortfolio.Models
 
 @{
-    ViewData["Title"] = "Developer Jonas";
+  ViewData["Title"] = "Developer Jonas";
 }
 
-<head>
-    <script type="text/javascript" src="wwwroot/js/3dCube.js" ></script>
-    <script type="text/javascript" src="wwwroot/js/darkmode.js" ></script>
-    <script type="text/javascript" src="wwwroot/js/headerscroll.js" ></script>
-</head>
-
-
-<label  class="switch">
-  <input onclick="darkmode();" type="checkbox">
-  <span class="slider round"></span>
-</label>
+@section scripts {
+  <script type="text/javascript" src="wwwroot/js/3dCube.js" asp-append-version="true"></script>
+  <script type="text/javascript" src="wwwroot/js/slideshow.js" asp-append-version="true"></script>
+  <script type="text/javascript" src="wwwroot/js/bubbles.js" asp-append-version="true"></script>
+}
+@section styles {
+  <link rel="stylesheet" href="wwwroot/css/3dCube.css" />
+  <link rel="stylesheet" href="wwwroot/css/About.css" />
+  <link rel="stylesheet" href="wwwroot/css/Apps.css" />
+  <link rel="stylesheet" href="wwwroot/css/Intro.css" />
+  <link rel="stylesheet" href="wwwroot/css/Project-Slideshow.css" />
+  <link rel="stylesheet" href="wwwroot/css/Projects.css" />
+  <link rel="stylesheet" href="wwwroot/css/Sections.css" />
+  <link rel="stylesheet" href="wwwroot/css/Skills.css" />
+}
 
 <main>
   <section id="intro">
-      <img id="background_svg"></img>
-
-   <!-- 
-    <div id="backdrop">
-
-      <div id="stack_bubble" class="stack_img">
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/csharp_original_logo_icon_146578.svg">
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/asp-svgrepo-com.svg">    
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/html-5-logo-svgrepo-com.svg">    
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/css3-logo-svgrepo-com.svg">    
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/javascript-svgrepo-com.svg">    
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/jquery-svgrepo-com.svg">    
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/sqlite-svgrepo-com.svg">    
-      </div>
-      <div class="stack_img">
-      <img src="wwwroot/images/nginx_original_logo_icon_146413.svg">
-      </div>
-
-    </div>
-    !-->
-
-<pre class="intro">
-<span>Hi, My name is</span>
-<span></span><span>Jonas Issa</span>
-<span>I Develop</span> <div class="rectwrapper intro" id="rectw">        
-    <div class="face">Robots</div>
-    <div class="face">Websites</div>
-    <div class="face ">Servers</div>
-    <div class="face">Software</div>
-  </div>
-</pre>
-    <partial name="_Contact" />
+    <img id="background_svg"></img>
+    @* <partial name="Components/BubbleStack" /> *@
+    <pre class="intro">
+      <span>Hi, My name is</span>
+      <span></span><span>Jonas Issa</span>
+      <span>
+        <span style="width:min-content">I Develop</span><partial name="Components/3dCube"/>
+      </span>
+    </pre>
   </section>
 </main>
 
 <div id="Content">
-<section class="section-format" id="about">
-<div class="section-header-wrapper"><h1 class="section-header">About Me</h1></div>
-<div class="content-wrapper"><div class="about-content"><div class="img-wrap"><img src="wwwroot/images/profile.jpeg"></img>Felsensteg Birg · Lauterbrunnen, Switzerland (2022)</div>Hi, I'm a Software Developer from Sydney.
+  <custom-section id="about" header="About Me">
+    <div class="about-content">
+      <div class="img-wrap">
+        <img src="wwwroot/images/profile.jpeg"></img>
+Felsensteg Birg · Lauterbrunnen, Switzerland (2022)
+      </div>
+Hi, I'm a Software Developer from Sydney.
 I have been coding for the better part of a decade.
 
 I am highly detail–focused and enjoy performing a mixture of practical work.
 
-My core specialties in my professional career differentiate vastly from Software, 3D Modeling, Metal machining and fabricating Prosthetic limbs.
-</div>
-</div>
-</section>
+My core specialties in my professional career differentiate vastly from Software, 3D Modeling, Metal machining
+and fabricating Prosthetic limbs.
+    </div>
+  </custom-section>
 
-<section class="section-format" id="projects">
-  <div class="section-header-wrapper"><h1 class="section-header">Projects</h1></div>
-    <div class="content-wrapper" style="padding-bottom: 5px;">
-<div>
+  <custom-section id="projects" header="Projects">
+    <div>
       <a class="prev" onclick="plusSlides(-1)">❮ </a>
-
       <a class="next" onclick="plusSlides(1)">❯ </a>
-</div>
-
-@{
+    </div>
     @foreach (var record in @Model.objects)
     {
-      <div class="project-wrapper fade-right" style="display:flex">
-        <div class="project-content"><div style="padding: 5%">@record.Preface<a href=@record.ExtLink target="_blank" rel="noopener noreferrer">@record.Title</a>
-
-@record.Description
-</div>
-</div>
-<div class="project-content-img"><img src="wwwroot/images/{@record.Inc}.jpeg"></img>
-</div>      
-</div>
-
+      <ProjectItem title="@record.Title" preface="@record.Preface" description="@record.Description"
+        ext-link="@record.ExtLink" img-src="wwwroot/images/projectImages/{@record.Inc}.jpeg"></ProjectItem>
     }
-    
-}
+    <div style="text-align:center">
+      @foreach (var record in @Model.objects)
+      {
+        <span class="dot" onclick="currentSlide(@record.Inc)"></span>
+      }
+    </div>
+  </custom-section>
 
-</div>
-      <div style="text-align:center">
+  <section class="section-format" id="skills">
+    <div class="section-header-wrapper">
+      <h1 class="section-header">Skills</h1>
+    </div>
 
-@{
+    <div class="content-wrapper">
 
-    @foreach (var record in @Model.objects)
-    {
-          <span class="dot" onclick="currentSlide(@record.Inc)"></span> 
-    }
-}
-      </div>
+      <div class="skills-wrapper">
 
-</section>
+        <div class="skills-content">
 
+          <li class="skills-list">
 
-<section class="section-format" id="skills">
-  <div class="section-header-wrapper"><h1 class="section-header">Skills</h1></div>
-
-  <div class="content-wrapper">
-
-    <div class="skills-wrapper">
-
-      <div class="skills-content">
-
-        <li class="skills-list">
-
-          <div>
-            <h1>Languages:</h1>
-C#
-ASP.NET
-Python
-Javascript
-          </div>          
-          <div>
-            <h1>Scripting:</h1>
-Linux Bash
-Windows Batch
-          </div>
-          <div>
-            <h1>Tools:</h1>
-Arch Linux
-Raspberry Pi
-Git
-Jupyter
-NGINX
-Django
-GUnicorn
-          </div>
-        </li>
+            <div>
+              <h1>Languages:</h1>
+              C#
+              ASP.NET
+              Python
+              Javascript
+            </div>
+            <div>
+              <h1>Scripting:</h1>
+              Linux Bash
+              Windows Batch
+            </div>
+            <div>
+              <h1>Tools:</h1>
+              Arch Linux
+              Raspberry Pi
+              Git
+              Jupyter
+              NGINX
+              Django
+              GUnicorn
+            </div>
+          </li>
         </div>
       </div>
-      </div>
+    </div>
 
-</section>
+  </section>
 </div>
 </main>
-    <script type="text/javascript" src="wwwroot/js/slideshow.js" ></script>
-    <script type="text/javascript" src="wwwroot/js/bubbles.js"  ></script>
