@@ -1,12 +1,12 @@
 # PortfolioWebsite-ASP
+
 PortfolioWebsite ASP Port
 
 dotnet publish -c Release --runtime linux-arm64
 
-scp -r bin/Release/net7.0/linux-arm64/publish user@website.com:~/dir
+scp -r bin/Release/net7.0/linux-arm64/publish <user@website.com>:~/dir
 
-
-#linux file
+# linux file
 ASPPortfolio.service
 [Unit]
 Description=ASPPortfolio
@@ -25,7 +25,11 @@ User=user
 [Install]
 WantedBy=multi-user.target
 
+az devops project list --organization https://dev.azure.com/kyuudou/
+az repos list --organization https://dev.azure.com/Kyuudou/ --project MyPortfolio
 
+projectid = e9ebda00-1e02-4e74-9184-24e206efead6
+repoid = 3f9eac34-d015-494c-a823-89b5e6309aec
 
 
 # docker buildx build --file DevOps/Docker/Dockerfile --load --platform linux/arm64 -t asp-portfolio-image:latest .
