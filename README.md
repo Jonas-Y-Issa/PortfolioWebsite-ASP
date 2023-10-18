@@ -28,3 +28,15 @@ WantedBy=multi-user.target
 
 
 
+# docker buildx build --file DevOps/Docker/Dockerfile --load --platform linux/arm64 -t asp-portfolio-image:latest .
+# docker image inspect asp-portfolio-image:latest -f '{{.Os}}/{{.Architecture}}'
+# docker save -o DevOps/Docker/asp-portfolio-image.tar asp-portfolio-image:latest
+
+# Enter Image and check directory
+# docker run -it --entrypoint /bin/sh asp-portfolio-image:latest
+# Try Run
+# docker run -it --rm asp-portfolio-image:latest
+# docker stats
+
+# To Do:
+# docker-compose.yml

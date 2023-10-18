@@ -2,19 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/ASPPortfolio.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary;ForceNoAlign"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "publish",
+            "label": "Publish .NET Project",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -36,6 +24,48 @@
                 "${workspaceFolder}/ASPPortfolio.csproj"
             ],
             "problemMatcher": "$msCompile"
-        }
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ASPPortfolio.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build Docker Image",
+            "type": "shell",
+            "command": "docker buildx build --file DevOps/Docker/Dockerfile --load --platform linux/arm64 -t asp-portfolio-image:latest .",
+            "dependsOn": "Publish .NET Project",
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+        },
+        {
+            "label": "Save Docker Image",
+            "type": "shell",
+            "command": "docker save -o DevOps/Docker/asp-portfolio-image.tar asp-portfolio-image:latest",
+            "dependsOn": "Build Docker Image",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        // {
+        //     "label": "Transfer Image to Raspberry Pi",
+        //     "type": "shell",
+        //     "command": "scp asp-portfolio-image.tar pi@192.168.1.101:~/",
+        //     "dependsOn": "Save Docker Image",
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": true
+        //     }
+        // }
     ]
 }
