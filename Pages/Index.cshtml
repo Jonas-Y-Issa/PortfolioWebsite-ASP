@@ -26,13 +26,11 @@
   <section id="intro">
     <img id="background_svg"></img>
     @* <partial name="Components/BubbleStack" /> *@
-    <pre class="intro">
-      <span>Hi, My name is</span>
-      <span></span><span>Jonas Issa</span>
-      <span>
-        <span style="width:min-content">I Develop</span><partial name="Components/3dCube"/>
-      </span>
-    </pre>
+<pre class="intro">
+<span>Hi, My name is</span>
+<span></span><span>Jonas Issa</span>
+<span style="width:min-content">I Develop</span> <partial name="Components/3dCube"/>
+</pre>
   </section>
 </main>
 
@@ -61,7 +59,7 @@ and fabricating Prosthetic limbs.
     @foreach (var record in @Model.objects)
     {
       <ProjectItem title="@record.Title" preface="@record.Preface" description="@record.Description"
-        ext-link="@record.ExtLink" img-src="wwwroot/images/projectImages/{@record.Inc}.jpeg"></ProjectItem>
+        ext-link="@record.ExtLink" img-src="asp/wwwroot/images/projectImages/{@record.Inc}.jpeg"></ProjectItem>
     }
     <div style="text-align:center">
       @foreach (var record in @Model.objects)
