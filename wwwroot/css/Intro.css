@@ -59,8 +59,8 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   -webkit-mask-size:100% auto;
-  -webkit-mask-image: url(/wwwroot/images/japanese-wave-sketch-27.png);
-  mask-image: url(/wwwroot/images/japanese-wave-sketch-27.png);
+  -webkit-mask-image: url(../images/japanese-wave-sketch-27.png);
+  mask-image: url(../images/japanese-wave-sketch-27.png);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 

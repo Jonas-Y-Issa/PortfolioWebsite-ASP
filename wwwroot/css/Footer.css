@@ -1,11 +1,13 @@
 /* Footer */
 footer {
   font-size: var(--fs1);
-  color: var(--imprint-text);
   position: static;
   bottom: 0;
-  background-color: var(--light-grey); 
+  background-color: var(--light-grey) !important; 
   width: 100%;
+}
+footer pre{
+  color: var(--imprint-text) !important;
 }
 footer:after {
 content: ' ';

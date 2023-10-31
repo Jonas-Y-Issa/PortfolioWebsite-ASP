@@ -1,7 +1,7 @@
 
 body { 
-  background-color: var(--light-grey); 
-  color: var(--light-white); 
+  background-color: var(--light-grey) !important; 
+  color: var(--light-white) !important;
 	transition: background-color var(--mode-speed-background) , color var(--mode-speed-background) ;
 	transition-timing-function: linear;
   margin: 0;
@@ -26,11 +26,11 @@ html {
   margin-top: 20px;
   font-size: 25px;
   font-family: var(--font-main);
-  color: rgba(0, 0, 0, 0.144);
+  color: rgba(0, 0, 0, 0.144) !important;
   rotate: -5deg;
   
 }
 .dark-mode .background_django_style{
-  color: rgba(255, 255, 255, 0.144);
+  color: rgba(255, 255, 255, 0.144) !important;
   
 }

@@ -7,26 +7,26 @@
 }
 
 @section scripts {
-  <script type="text/javascript" src="wwwroot/js/3dCube.js" asp-append-version="true"></script>
-  <script type="text/javascript" src="wwwroot/js/slideshow.js" asp-append-version="true"></script>
-  <script type="text/javascript" src="wwwroot/js/bubbles.js" asp-append-version="true"></script>
+  <script type="text/javascript" src="asp/wwwroot/js/3dCube.js" asp-append-version="true"></script>
+  <script type="text/javascript" src="asp/wwwroot/js/slideshow.js" asp-append-version="true"></script>
+  <script type="text/javascript" src="asp/wwwroot/js/bubbles.js" asp-append-version="true"></script>
 }
 @section styles {
-  <link rel="stylesheet" href="wwwroot/css/3dCube.css" />
-  <link rel="stylesheet" href="wwwroot/css/About.css" />
-  <link rel="stylesheet" href="wwwroot/css/Apps.css" />
-  <link rel="stylesheet" href="wwwroot/css/Intro.css" />
-  <link rel="stylesheet" href="wwwroot/css/Project-Slideshow.css" />
-  <link rel="stylesheet" href="wwwroot/css/Projects.css" />
-  <link rel="stylesheet" href="wwwroot/css/Sections.css" />
-  <link rel="stylesheet" href="wwwroot/css/Skills.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/3dCube.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/About.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/Apps.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/Intro.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/Project-Slideshow.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/Projects.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/Sections.css" />
+  <link rel="stylesheet" href="asp/wwwroot/css/Skills.css" />
 }
 
 <main>
   <section id="intro">
     <img id="background_svg"></img>
     @* <partial name="Components/BubbleStack" /> *@
-<pre class="intro">
+    <pre class="intro">
 <span>Hi, My name is</span>
 <span></span><span>Jonas Issa</span>
 <span style="width:min-content">I Develop</span> <partial name="Components/3dCube"/>
@@ -38,8 +38,8 @@
   <custom-section id="about" header="About Me">
     <div class="about-content">
       <div class="img-wrap">
-        <img src="wwwroot/images/profile.jpeg"></img>
-Felsensteg Birg · Lauterbrunnen, Switzerland (2022)
+        <img src="asp/wwwroot/images/profile.jpeg"></img>
+        Felsensteg Birg · Lauterbrunnen, Switzerland (2022)
       </div>
 Hi, I'm a Software Developer from Sydney.
 I have been coding for the better part of a decade.
@@ -81,34 +81,43 @@ and fabricating Prosthetic limbs.
         <div class="skills-content">
 
           <li class="skills-list">
-
-            <div>
-              <h1>Languages:</h1>
-              C#
-              ASP.NET
-              Python
-              Javascript
-            </div>
-            <div>
-              <h1>Scripting:</h1>
-              Linux Bash
-              Windows Batch
-            </div>
-            <div>
-              <h1>Tools:</h1>
-              Arch Linux
-              Raspberry Pi
-              Git
-              Jupyter
-              NGINX
-              Django
-              GUnicorn
-            </div>
+            <div class="row">
+              <div class="col">
+                <h1>SCRIPTING / LANGUAGES</h1>
+                C# Python PHP
+                JavaScript Typescript JQuery
+                HTML SQL Ajax
+                JSON CSS / SCSS / SASS
+              </div>
+              <div class="col">
+                <h1>TECH STACK</h1>
+                .NET Core Angular Entity Framework
+                Dapper Node.js Django
+                Next.js Docker Nginx
+                Terraform Webpack Bootstrap
+                Tailwind
+              </div>
+              <div class="col">
+                <h1>TOOLS</h1>
+                Azure Data Studio Azure DevOps SSMS
+                Visual Studio VS Code Postman
+                APIs GIT Arch Linux
+                Sourcetree
+              </div>
+              <div class="col">
+                <h1>CONCEPTS</h1>
+                CI/CD Agile SCRUM
+                JIRA ClickUp User Story
+                HTTP MVP Design GIT Flow
+                REST Single Page Apps Infrastructure as Code
+                Environments CRM Integration Server Side Rendering
+                Cross-browser Compatibility Design Patterns and Principles
+              </div>
           </li>
         </div>
       </div>
     </div>
-
-  </section>
+</div>
+</section>
 </div>
 </main>

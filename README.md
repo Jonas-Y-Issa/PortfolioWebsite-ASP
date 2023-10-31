@@ -1,46 +1,121 @@
-# PortfolioWebsite-ASP
+# Portfolio-ASP
 
-PortfolioWebsite ASP Port
+Portfolio website written with .Net  
 
-dotnet publish -c Release --runtime linux-arm64
+## For CI/CD Pipeline Please see Parent Repo
 
-scp -r bin/Release/net7.0/linux-arm64/publish <user@website.com>:~/dir
+## Setup
 
-# linux file
-ASPPortfolio.service
-[Unit]
-Description=ASPPortfolio
-After=network.target
+### Required for Options
 
-[Service]
-Type=forking
-WorkingDirectory= directory /publish/
-ExecStart=directory/publish/ASPPortfolio
-StandardOutput=inherit
-StandardError=inherit
-Restart=always
-RemainAfterExit=yes
-User=user
+#### - Startup Docker Registry
 
-[Install]
-WantedBy=multi-user.target
+```Shell
+# Start Docker Registry
+    docker run -d -p 5000:5000 --restart always --name registry registry:2
+```
 
-az devops project list --organization https://dev.azure.com/kyuudou/
-az repos list --organization https://dev.azure.com/Kyuudou/ --project MyPortfolio
+### Recommended
 
-projectid = e9ebda00-1e02-4e74-9184-24e206efead6
-repoid = 3f9eac34-d015-494c-a823-89b5e6309aec
+#### - Portainer for RaspberryPi
 
+```Shell
+# Pull Latest Portainer
+    docker pull portainer/portainer-ce:latest
+# Run Portainer and set restart flag to always
+    docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+```
 
-# docker buildx build --file DevOps/Docker/Dockerfile --load --platform linux/arm64 -t asp-portfolio-image:latest .
-# docker image inspect asp-portfolio-image:latest -f '{{.Os}}/{{.Architecture}}'
-# docker save -o DevOps/Docker/asp-portfolio-image.tar asp-portfolio-image:latest
+```Portainer Url - http://raspberrypi-hostname:9000```
 
-# Enter Image and check directory
-# docker run -it --entrypoint /bin/sh asp-portfolio-image:latest
-# Try Run
-# docker run -it --rm asp-portfolio-image:latest
-# docker stats
+## Option 0 - Dotnet Build and Run as Service
 
-# To Do:
-# docker-compose.yml
+```Shell
+# Secure Copy Build to Pi
+    scp ASP-Portfolio/bin/Release/net7.0/linux-arm64/ [user]@[website.com]:~/
+```
+
+### RaspberryPi
+
+Create a Service file on your Pi and run it using  
+
+```Shell
+#systemd service
+    sudo systemctl start ASPPortfolio.service
+```
+
+## Option 1: - Manual Docker Deploy
+
+### Build Image
+
+```Shell
+# Build Production 
+    dotnet publish -c Release --runtime linux-arm64
+
+# Build Image for linux/arm64 using buildx
+    #--file [path to Dockerfile]
+    #--platform [os]/[architecture]
+    docker buildx build --file DevOps/Docker/Dockerfile --load --platform linux/arm64 -t asp-portfolio-image:latest .
+
+# Test using inspect
+    #-should return "linux/arm64"
+    docker image inspect asp-portfolio-image:latest -f '{{.Os}}/{{.Architecture}}'
+
+# Export Image as tar file
+    docker save -o DevOps/Docker/images/asp-portfolio-image.tar asp-portfolio-image:latest
+
+    docker tag asp-portfolio-image:latest localhost:5000/asp-portfolio-image
+
+# Using Portainer
+    docker push localhost:5000/asp-portfolio-image:latest
+
+# Not Using Portainer
+    # - Secure Copy image to Pi
+    scp DevOps/Docker/asp-portfolio-image.tar [user]@[website.com]:~/
+
+```
+
+## Option 2: - CI/CD Docker Deploy Setup
+
+### Automated
+
+#### Build Docker Images
+
+```Shell
+# Build docker Images through Docker Compose
+    docker compose -f ${workspaceFolder}/DevOps/Docker/docker-compose.build.yml build --no-cache
+```
+
+#### Docker Swarm
+
+```Shell
+# Initialise
+    docker swarm init
+    docker stack deploy -c DevOps/Docker/docker-compose.yml
+    docker tag asp-portfolio-image localhost:5000/asp-portfolio-image:latest
+
+# Push Image to registry
+    docker push localhost:5000/asp-portfolio-image:latest
+
+# Export Image as tar file
+    docker save -o DevOps/Docker/images/asp-portfolio-image.tar asp-portfolio-image:latest
+
+    docker tag asp-portfolio-image:latest localhost:5000/asp-portfolio-image
+```
+
+```Shell
+# Stop and Remove Registry
+    docker container stop registry
+    docker container rm -v registry
+```
+
+## How to Test Image
+
+### Enter Image and check directory
+
+```Shell
+# Check Running Stats
+    docker stats
+# Run Image in a container in Interactive mode
+    docker run -it --rm asp-portfolio-image:latest
+```
