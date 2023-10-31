@@ -1,6 +1,12 @@
-# Portfolio-ASP
+# A Terminal Inspired Portfolio Website
 
-Portfolio website written with .Net  
+## Stack
+
+C#/.Net/Nginx/MariaDB/Javascript/Docker/Terraform/Azure
+
+Currently Running @ <https://developerjonas.com/ASP>
+
+![ksnip_20230119-150824](https://user-images.githubusercontent.com/110714003/213353015-9f0cab28-845e-4e02-9ce1-3397e5c52c7b.png)
 
 ## For CI/CD Pipeline Please see Parent Repo
 
@@ -16,6 +22,11 @@ Portfolio website written with .Net
 ```
 
 ### Recommended
+
+#### - General Tips
+
+For faster development it is recommended to setup these commands into a build script, this can be done in azure or even something as simple as tasks.json if youre using VS Code.  
+An example of tasks.json for this project can be found in the parent repo which contains all things CI/CD.
 
 #### - Portainer for RaspberryPi
 
