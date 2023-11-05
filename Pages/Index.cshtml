@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="asp/wwwroot/css/Projects.css" />
   <link rel="stylesheet" href="asp/wwwroot/css/Sections.css" />
   <link rel="stylesheet" href="asp/wwwroot/css/Skills.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 }
 
 <main>
@@ -36,36 +38,32 @@
 
 <div id="Content">
   <custom-section id="about" header="About Me">
-    <div class="about-content">
-      <div class="img-wrap">
-        <img src="asp/wwwroot/images/profile.jpeg"></img>
-        Felsensteg Birg · Lauterbrunnen, Switzerland (2022)
-      </div>
-Hi, I'm a Software Developer from Sydney.
+    <div class="about-content"><div class="img-wrap"><img class="m-0" src="asp/wwwroot/images/profile.jpeg"></img>Felsensteg Birg · Lauterbrunnen, Switzerland (2022)</div>Hi, I'm a Software Developer from Sydney.
 I have been coding for the better part of a decade.
 
 I am highly detail–focused and enjoy performing a mixture of practical work.
 
 My core specialties in my professional career differentiate vastly from Software, 3D Modeling, Metal machining
-and fabricating Prosthetic limbs.
-    </div>
+and fabricating Prosthetic limbs.</div>
   </custom-section>
-
   <custom-section id="projects" header="Projects">
-    <div>
-      <a class="prev" onclick="plusSlides(-1)">❮ </a>
-      <a class="next" onclick="plusSlides(1)">❯ </a>
-    </div>
     @foreach (var record in @Model.objects)
     {
       <ProjectItem title="@record.Title" preface="@record.Preface" description="@record.Description"
         ext-link="@record.ExtLink" img-src="asp/wwwroot/images/projectImages/{@record.Inc}.jpeg"></ProjectItem>
     }
-    <div style="text-align:center">
+    <div class="project-list-container">
+      <div>
+        <a class="prev text-decoration-none" onclick="plusSlides(-1)">❮</a>
+      </div>
       @foreach (var record in @Model.objects)
       {
-        <span class="dot" onclick="currentSlide(@record.Inc)"></span>
+        <pre><div class="dot justify-content" onclick="currentSlide(@record.Inc)"></div>@record.Title</pre>
       }
+      <div>
+        <a class="next text-decoration-none" onclick="plusSlides(1)">❯</a>
+      </div>
+
     </div>
   </custom-section>
 
@@ -82,36 +80,40 @@ and fabricating Prosthetic limbs.
 
           <li class="skills-list">
             <div class="row">
-              <div class="col">
+              <div class="col-6">
                 <h1>SCRIPTING / LANGUAGES</h1>
-                C# Python PHP
-                JavaScript Typescript JQuery
-                HTML SQL Ajax
-                JSON CSS / SCSS / SASS
+                <div class="skills-grid-container">
+                  <div class="skills-grid-item"><br>C# <br>JavaScript<br>HTML<br>JSON</div>
+                  <div class="skills-grid-item"><br>PYTHON<br>Typescript <br>SQL<br>CSS / SCSS / SASS</div>
+                  <div class="skills-grid-item"><br>PHP<br>JQuery<br>Ajax</div>
+                </div>
               </div>
-              <div class="col">
+              <div class="col-5">
                 <h1>TECH STACK</h1>
-                .NET Core Angular Entity Framework
-                Dapper Node.js Django
-                Next.js Docker Nginx
-                Terraform Webpack Bootstrap
-                Tailwind
+                <div class="skills-grid-container">
+                  <div class="skills-grid-item"><br>.NET Core<br>Dapper<br>Next.js<br>Terraform<br>Tailwind</div>
+                  <div class="skills-grid-item"><br>Angular<br>Node.js<br>Docker<br>Webpack</div>
+                  <div class="skills-grid-item"><br>Entity<br>Framework<br>Django<br>Nginx<br>Bootstrap</div>
+                </div>
               </div>
-              <div class="col">
+              <div class="col-6">
                 <h1>TOOLS</h1>
-                Azure Data Studio Azure DevOps SSMS
-                Visual Studio VS Code Postman
-                APIs GIT Arch Linux
-                Sourcetree
+                <div class="skills-grid-container">
+                  <div class="skills-grid-item"><br>Azure Data Studio<br>Visual Studio<br>APIs<br>Sourcetree</div>
+                  <div class="skills-grid-item"><br>Azure DevOps<br>VS Code<br>GIT</div>
+                  <div class="skills-grid-item"><br>SSMS<br>Postman<br>Arch Linux</div>
+                </div>
               </div>
-              <div class="col">
+              <div class="col-6">
                 <h1>CONCEPTS</h1>
-                CI/CD Agile SCRUM
-                JIRA ClickUp User Story
-                HTTP MVP Design GIT Flow
-                REST Single Page Apps Infrastructure as Code
-                Environments CRM Integration Server Side Rendering
-                Cross-browser Compatibility Design Patterns and Principles
+                <div class="skills-grid-container">
+                  <div class="skills-grid-item"><br>CI/CD<br>JIRA<br>HTTP<br>REST<br>Environments<br>Cross-browser
+                    Compatibility</div>
+                  <div class="skills-grid-item"><br>Agile<br>ClickUp<br>MVP Design<br>Single Page Apps<br>CRM
+                    Integration<br>Design Patterns and Principles</div>
+                  <div class="skills-grid-item"><br>SCRUM<br>User Story<br>GIT Flow<br>Infrastructure as Code<br>Server
+                    Side Rendering</div>
+                </div>
               </div>
           </li>
         </div>

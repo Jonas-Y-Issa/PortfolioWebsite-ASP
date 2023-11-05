@@ -6,7 +6,7 @@ section{
 }
 .section-format{
     background-color: var(--light-grey-section);
-  	transition: background-color  var(--mode-speed-background) ;
+  	transition: background-color  var(--mode-speed-background);
 	transition-timing-function: linear;
     max-height: 100vh;
     overflow: hidden;
@@ -18,7 +18,7 @@ section{
     padding: var(--left-pad);
     justify-content: center;
     align-items: center;
-    white-space: pre-wrap;
+    white-space: pre-line;
     min-height:100%;
     margin: auto;
 }

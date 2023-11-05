@@ -1,4 +1,13 @@
 /* The dots/bullets/indicators */
+.project-list-container{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  text-align:center; 
+  white-space:normal; 
+  margin-left:60px;
+}
+
 .dot {
     cursor: pointer;
     height: 15px;
@@ -22,6 +31,7 @@
     font-weight: bold;
     font-size: 80px;
     transition: 0.3s ease;
+    width:fit-content;
     border-radius: 3px 0px 0px 3px;
     user-select: none;
     rotate: 90deg;

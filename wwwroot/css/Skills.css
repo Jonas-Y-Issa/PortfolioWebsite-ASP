@@ -11,7 +11,7 @@
 
 .skills-content
 {
-    font-size: 25px;
+    font-size: 18px;
     font-family: var(--font-main);
     border-radius: 10px;
     display: inline-flex;
@@ -38,6 +38,11 @@
 }
 .skills-list div{
     text-indent: -20px;
-    padding-inline: 50px;
     white-space: pre-line;
+}
+
+.skills-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }

@@ -8,6 +8,8 @@
   margin: 0;
   transform: translate(0, -50%) translateY(50vh);
   justify-content: center;
+  scrollbar-width: none !important;
+	-ms-overflow-style: none !important;
 }
 
 #backdrop{

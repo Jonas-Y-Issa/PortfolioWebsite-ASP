@@ -32,13 +32,6 @@ public static class SeedData
                 new Project
                 {
                     Preface = "Find it Here:",
-                    Title = "Ball Knight on Oculus",
-                    ExtLink = "https://www.oculus.com/experiences/quest/3852290258211569/",
-                    Description = "A VR game Developed in Unity. Use your knightley reflexes and magic sword art to fend off never ending and ever increasing numbers of enemy balls! These bouncy baddies will have you overwhelmed in no time if not nimble and alert. Imbue your sword with the souls of your enemies then point it to the sky and watch your foes disappear in a crack of thunder. Will you continue to hold the title of hero in this once peaceful town? Compete to get your score on top of the leaderboard!",
-                },                
-                new Project
-                {
-                    Preface = "Find it Here:",
                     Title = "4-Way-chess",
                     ExtLink = "https://github.com/Jonas-Y-Issa/4-Way-Chess",
                     Description = "A Work in Progress. My first ever C# project, long before I learnt about Git I was saving RaR and Zip files to keep version history. A first lesson in the fundamentals of classes, frameworks, networking. Originally built 9 years ago on the XNA/MonoGame framework in C# I am currently refactoring to update the framework from XNA to its renamed MonoGame and further more moving it away from its Visual Studio IDE and into a more hands on environment in VSCode. Being a 9 year old project it may be best to restart on a better framework, rather than refactoring it all, however it holds sentimental value. I've made it public on Git for those interested.",
