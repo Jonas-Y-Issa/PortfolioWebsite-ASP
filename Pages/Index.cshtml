@@ -38,13 +38,16 @@
 
 <div id="Content">
   <custom-section id="about" header="About Me">
-    <div class="about-content"><div class="img-wrap"><img class="m-0" src="asp/wwwroot/images/profile.jpeg"></img>Felsensteg Birg · Lauterbrunnen, Switzerland (2022)</div>Hi, I'm a Software Developer from Sydney.
-I have been coding for the better part of a decade.
+    <div class="about-content">
+      <div class="img-wrap"><img class="m-0" src="asp/wwwroot/images/profile.jpeg"></img>Felsensteg Birg ·
+        Lauterbrunnen, Switzerland (2022)</div>Hi, I'm a Software Developer from Sydney.
+      I have been coding for the better part of a decade.
 
-I am highly detail–focused and enjoy performing a mixture of practical work.
+      I am highly detail–focused and enjoy performing a mixture of practical work.
 
-My core specialties in my professional career differentiate vastly from Software, 3D Modeling, Metal machining
-and fabricating Prosthetic limbs.</div>
+      My core specialties in my professional career differentiate vastly from Software, 3D Modeling, Metal machining
+      and fabricating Prosthetic limbs.
+    </div>
   </custom-section>
   <custom-section id="projects" header="Projects">
     @foreach (var record in @Model.objects)
@@ -71,50 +74,45 @@ and fabricating Prosthetic limbs.</div>
     <div class="section-header-wrapper">
       <h1 class="section-header">Skills</h1>
     </div>
-
     <div class="content-wrapper">
-
       <div class="skills-wrapper">
-
         <div class="skills-content">
-
           <li class="skills-list">
-            <div class="row">
-              <div class="col-6">
-                <h1>SCRIPTING / LANGUAGES</h1>
-                <div class="skills-grid-container">
-                  <div class="skills-grid-item"><br>C# <br>JavaScript<br>HTML<br>JSON</div>
-                  <div class="skills-grid-item"><br>PYTHON<br>Typescript <br>SQL<br>CSS / SCSS / SASS</div>
-                  <div class="skills-grid-item"><br>PHP<br>JQuery<br>Ajax</div>
-                </div>
+            <div class="col-12 col-sm-6">
+              <h1>SCRIPTING / LANGUAGES</h1>
+              <div class="skills-grid-container">
+                <div class="col-md-4"><br>C# <br>JavaScript<br>HTML<br>JSON</div>
+                <div class="col-md-4"><br>PYTHON<br>Typescript <br>SQL<br>CSS / SCSS / SASS</div>
+                <div class="col-md-4"><br>PHP<br>JQuery<br>Ajax</div>
               </div>
-              <div class="col-5">
-                <h1>TECH STACK</h1>
-                <div class="skills-grid-container">
-                  <div class="skills-grid-item"><br>.NET Core<br>Dapper<br>Next.js<br>Terraform<br>Tailwind</div>
-                  <div class="skills-grid-item"><br>Angular<br>Node.js<br>Docker<br>Webpack</div>
-                  <div class="skills-grid-item"><br>Entity<br>Framework<br>Django<br>Nginx<br>Bootstrap</div>
-                </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <h1>TECH STACK</h1>
+              <div class="skills-grid-container">
+                <div class="col-md-4"><br>.NET Core<br>Dapper<br>Next.js<br>Terraform<br>Tailwind</div>
+                <div class="col-md-4"><br>Angular<br>Node.js<br>Docker<br>Webpack</div>
+                <div class="col-md-4"><br>Entity Framework<br>Django<br>Nginx<br>Bootstrap</div>
               </div>
-              <div class="col-6">
-                <h1>TOOLS</h1>
-                <div class="skills-grid-container">
-                  <div class="skills-grid-item"><br>Azure Data Studio<br>Visual Studio<br>APIs<br>Sourcetree</div>
-                  <div class="skills-grid-item"><br>Azure DevOps<br>VS Code<br>GIT</div>
-                  <div class="skills-grid-item"><br>SSMS<br>Postman<br>Arch Linux</div>
-                </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <h1>TOOLS</h1>
+              <div class="skills-grid-container">
+                <div class="col-md-4"><br>Azure Data Studio<br>Visual Studio<br>APIs<br>Sourcetree</div>
+                <div class="col-md-4"><br>Azure DevOps<br>VS Code<br>GIT</div>
+                <div class="col-md-4"><br>SSMS<br>Postman<br>Arch Linux</div>
               </div>
-              <div class="col-6">
-                <h1>CONCEPTS</h1>
-                <div class="skills-grid-container">
-                  <div class="skills-grid-item"><br>CI/CD<br>JIRA<br>HTTP<br>REST<br>Environments<br>Cross-browser
-                    Compatibility</div>
-                  <div class="skills-grid-item"><br>Agile<br>ClickUp<br>MVP Design<br>Single Page Apps<br>CRM
-                    Integration<br>Design Patterns and Principles</div>
-                  <div class="skills-grid-item"><br>SCRUM<br>User Story<br>GIT Flow<br>Infrastructure as Code<br>Server
-                    Side Rendering</div>
-                </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <h1>CONCEPTS</h1>
+              <div class="skills-grid-container">
+                <div class="col-md-4"><br>CI/CD<br>JIRA<br>HTTP<br>REST<br>Environments<br>Cross-browser
+                  Compatibility</div>
+                <div class="col-md-4"><br>Agile<br>ClickUp<br>MVP Design<br>Single Page Apps<br>CRM
+                  Integration<br>Design Patterns and Principles</div>
+                <div class="col-md-4"><br>SCRUM<br>User Story<br>GIT Flow<br>Infrastructure as Code<br>Server
+                  Side Rendering</div>
               </div>
+            </div>
           </li>
         </div>
       </div>

@@ -10,6 +10,7 @@
   justify-content: center;
   scrollbar-width: none !important;
 	-ms-overflow-style: none !important;
+  overflow: inherit;
 }
 
 #backdrop{
@@ -166,6 +167,7 @@
 }
 .stat div a{
   position: relative;
+  margin-left: 5px;
   float: right;
 }
 a[href^="mailto:"]{

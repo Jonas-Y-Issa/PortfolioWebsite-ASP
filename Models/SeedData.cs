@@ -25,9 +25,9 @@ public static class SeedData
                 new Project
                 {
                     Preface = "This Wesbite:",
-                    Title = "Portfolio Website Github",
-                    ExtLink = "https://github.com/Jonas-Y-Issa/PortfolioWebsite",
-                    Description = "Host: My Raspberry Pi 4 (Debian) Stack: Javascript/MariaDB/Django/Gunicorn/Nginx Why a Raspberry Pi? The idea was to be able to interact with every possible step of creating a website, from SSL creation, Port Forwarding, Reverse Proxies and the tools required to achieve these such as NGINX and Django. The choice to use Django of course is due to the use of Python but also stems from the scalability of hosting not just this static webpage, but to have a place to be able to reliably host additional web applications in the future. I've made this open source. If you would like to check out the code or use it as a template for your own, please feel free to head over to github.",
+                    Title = "ASP Portfolio Website Github",
+                    ExtLink = "https://github.com/Jonas-Y-Issa/PortfolioWebsite-ASP",
+                    Description = "Self-Hosted Fullstack Multi-Language Website with CI/CD Repo\nHost: Raspberry Pi 4 (Debian)\nStack: C#/ASP.Net Core/SQLite3/Javascript/Nginx/Docker/Terraform/Azure\n\nWhy a Raspberry Pi? The idea was to be able to interact with every possible step of website CI/CD Pipeline, Web Development, SSL creation, Port Forwarding, Reverse Proxies and the tools required to achieve these such as NGINX, Docker and Terraform for IaC. I've documented my code and provided it as open source.\nIf you would like to check out the code or use it as a template for your own, please feel free to head over to github.",
                 },
                 new Project
                 {

@@ -31,7 +31,6 @@
     .about-content
     {
         font-size: 25px;
-        white-space: pre-wrap;
         border-radius: 10px;
         max-width: calc(var(--img-size)*2);
         min-width: 40%;
