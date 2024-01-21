@@ -50,24 +50,24 @@
     </div>
   </custom-section>
   <custom-section id="projects" header="Projects">
-    @foreach (var record in @Model.objects)
-    {
-      <ProjectItem title="@record.Title" preface="@record.Preface" description="@record.Description"
-        ext-link="@record.ExtLink" img-src="asp/wwwroot/images/projectImages/{@record.Inc}.jpeg"></ProjectItem>
-    }
-    <div class="project-list-container">
-      <div>
-        <a class="prev text-decoration-none" onclick="plusSlides(-1)">❮</a>
-      </div>
       @foreach (var record in @Model.objects)
       {
-        <pre><div class="dot justify-content" onclick="currentSlide(@record.Inc)"></div>@record.Title</pre>
+        <ProjectItem title="@record.Title" preface="@record.Preface" description="@record.Description"
+          ext-link="@record.ExtLink" img-src="asp/wwwroot/images/projectImages/@record.ImageName"></ProjectItem>
       }
-      <div>
-        <a class="next text-decoration-none" onclick="plusSlides(1)">❯</a>
-      </div>
+      <div class="project-list-container">
+        <div>
+          <a class="prev text-decoration-none" onclick="plusSlides(-1)">❮</a>
+        </div>
+        @foreach (var record in @Model.objects)
+        {
+          <ul class="text-nowrap d-flex"><div class="dot justify-content" onclick="currentSlide(@record.Inc)"></div><p>@record.Title</p></ul>
+        }
+        <div>
+          <a class="next text-decoration-none" onclick="plusSlides(1)">❯</a>
+        </div>
 
-    </div>
+      </div>
   </custom-section>
 
   <section class="section-format" id="skills">

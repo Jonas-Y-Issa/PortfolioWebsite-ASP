@@ -28,6 +28,9 @@ namespace ASPPortfolio.Migrations
                     b.Property<string>("ExtLink")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ImageName")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Preface")
                         .HasColumnType("TEXT");
 

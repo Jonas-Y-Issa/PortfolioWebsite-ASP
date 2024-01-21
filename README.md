@@ -2,7 +2,7 @@
 
 ## Stack
 
-C#/.Net/Nginx/MariaDB/Javascript/Docker/Terraform/Azure
+C#/.Net/Nginx/SQlite3/Javascript/Docker/Terraform/Azure
 
 Currently Running @ <https://developerjonas.com/ASP>
 
