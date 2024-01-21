@@ -1,6 +1,7 @@
 .about-content
  {
      background-color: rgba(0, 0, 0, 0.048);
+     font-size: clamp(10px, 2.5vw, 15px);
      font-family: var(--font-main);
      padding: 5%;
      float: left;
@@ -15,7 +16,6 @@
     color: var(--red-dark);
     font-family: var(--font-compliment);
     filter: grayscale(100%);
-    font-size: 15px;        
 }
 .img-wrap:hover{
     filter: none;
@@ -30,7 +30,6 @@
 @media (min-width: 1000px){
     .about-content
     {
-        font-size: 25px;
         border-radius: 10px;
         max-width: calc(var(--img-size)*2);
         min-width: 40%;
@@ -45,7 +44,6 @@
 @media (max-width: 999px){
     .about-content
     {
-        font-size: 20px;
         border-radius: 15px;
         max-width: 90%;
         min-width: var(--img-size);

@@ -11,7 +11,12 @@ section{
     max-height: 100vh;
     overflow: hidden;
 }
-
+@media only screen and (max-width: 768px) {
+    .content-wrapper
+    {
+        padding-top: 0px !important;
+    }
+}
 .content-wrapper
 {
     display: flex;

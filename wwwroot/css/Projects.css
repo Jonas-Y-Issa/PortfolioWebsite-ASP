@@ -20,8 +20,23 @@
   background-color: var(--light-grey);
   color: var(--light-white);
 }
-
+.projects-container{
+    display: flex;
+    padding: var(--left-pad);
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    min-height:100%;
+    margin: auto;
+}
 @media (max-width: 999px) {
+    
+.projects-container{
+    height: 500px;
+    white-space: pre-line;
+    min-height:100%;
+    margin: auto;
+}
     .project-wrapper{
     border-bottom-right-radius: 35px;
     border-top-right-radius: 10px;

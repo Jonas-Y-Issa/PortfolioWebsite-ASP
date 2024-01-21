@@ -7,7 +7,7 @@
     align-items: center;
 }
 .skills-content{
-    font-size: 18px;
+    font-size: clamp(6px, 2.5vw, 15px);
     font-family: var(--font-main);
     border-radius: 10px;
     display: inline-flex;
@@ -28,12 +28,24 @@
     color: var(--red-dark);
     text-shadow: 2px 2px #000000;
 }
-.skills-list div{
+.skills-list div, .skills-list ul{
     text-indent: -20px;
-    white-space: pre-line;
+    white-space: normal;
+    min-width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .skills-list div, .skills-list ul{
+    min-width: 80%;
+    width: min-content;
+    }
 }
 .skills-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+}
+
+.skills-grid-container li{
+    list-style: none;
 }

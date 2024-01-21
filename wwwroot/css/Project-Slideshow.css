@@ -63,6 +63,17 @@
 
 
  
+@media (max-width: 999px) {
+  .project-list-container{
+    align-self: baseline;
+  }
+  .project-list-container>ul{
+    padding: 0px;
+  }
+  .project-list-container>ul>p{
+    display: none;
+  }
+}
   .fade-left {
     animation-name: fade-left;
     animation-duration: 1s;
